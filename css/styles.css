@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'News Cycle';
+  font-style: normal;
+  font-weight: normal;
+  src: local('News Cycle'), local('NewsCycle'), url('http://themes.googleusercontent.com/static/fonts/newscycle/v4/9Xe8dq6pQDsPyVH2D3tMQr3hpw3pgy2gAi-Ip7WPMi0.woff') format('woff');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #003547;
+  font-family: 'News Cycle',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #F58026;
+  font-weight: normal;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 28px;
+  margin-bottom: 2em;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  border-top: 10px solid #003547;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+footer {
+  height: 4em;
+  background-image: url(http://thinkshout.com/sites/all/themes/swift/images/texture-bkgrd.png);
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+
+img.forkme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  z-index: 100;
+}
+
+/* COMMON STEP STYLES */
+
+.step {
+  width: 900px;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  -ms-box-sizing:     border-box;
+  -o-box-sizing:      border-box;
+  box-sizing:         border-box;
+  }
+
+/* fade out inactive slides */
+
+.step {
+  -webkit-transition: opacity 1s;
+  -moz-transition:    opacity 1s;
+  -ms-transition:     opacity 1s;
+  -o-transition:      opacity 1s;
+  transition:         opacity 1s;
+}
+
+.step:not(.active) {
+  opacity: 0.3;
+}
+
+/*
+ * SLIDE STEP STYLES
+ *
+ * inspired by: http://html5slides.googlecode.com/svn/trunk/styles.css
+ *
+ * ;)
+ */
+
+.slide {
+  display: block;
+  width: 900px;
+  height: 700px;
+  padding: 40px 60px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+  border: 1px solid rgba(0, 0, 0, .3);
+}
