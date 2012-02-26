@@ -4,60 +4,85 @@
     <meta charset='utf-8'>
     <link rel="shortcut icon" href="http://thinkshout.com/sites/all/themes/swift/favicon.ico" type="image/vnd.microsoft.icon" />
     <title>Geek Out with Online Maps as StoryTelling Devices</title>
+    <link rel="stylesheet" href="css/leaflet.css" />
     <link type="text/css" rel="stylesheet" href="css/styles.css" media="all" />
   </head>
   <body>
     <div id="wrap">
-    <h1 class="site-name"><a href="/" rel="home" title="ThinkShout" class="active"><img src="http://thinkshout.com/sites/all/themes/swift/logo.png" alt="ThinkShout" />
-    </h1>
-    <p>
-      <a href="https://github.com/thinkshout/12ntcmaps"><img class="forkme" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-    </p>
-    <div id="impress">
-      <div class="step slide" data-x="-1000" data-y="-1500">
-        <h1>Geek Out with Online Maps as Story Telling Devices</h1>
-        <div class="description">
-          2012 NTC Presentation - "Geek Out With Online Maps As Storytelling Devices"
+      <header>
+        <h1 class="site-name"><a href="http://thinkshout.com" title="ThinkShout"><img src="imgs/logo.png" alt="ThinkShout" /></h1>
+      </header>
+      <div><a href="https://github.com/thinkshout/12ntcmaps"><img class="forkme" src="imgs/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a></div>
+      <div id="impress">
+        <div class="step slide" data-x="-1000" data-y="-1500">
+          <h1>Geek Out with Online Maps as Story Telling Devices</h1>
+          <div class="description">2012 NTC Presentation - "Geek Out With Online Maps As Storytelling Devices"</div>
         </div>
-        <h2>
-          Authors
-        </h2>
-        <p>
-          Sean Larkin (sean@thinkshout.com)<br>
-        </p>
-        <h2>
-          Contact
-        </h2>
-        <p>
-          ThinkShout (info@thinkshout.com)<br>
-        </p>
-        <h2>
-          Download
-        </h2>
-        <p>
-          You can download this project in either <a href="https://github.com/thinkshout/12ntcmaps/zipball/master">zip</a> or <a href="https://github.com/thinkshout/12ntcmaps/tarball/master">tar formats.</a>
-        </p>
-        <p>
-          <a href="https://github.com/thinkshout/12ntcmaps/tarball/master"></a>
-        </p>
-        <p>
-          You can also clone the project with <a href="http://git-scm.com">Git</a> by running:
-        </p>
-        <pre>
-$ git clone git://github.com/thinkshout/12ntcmaps
-</pre>
-        <div class="footer">
-          get the source code on GitHub : <a href="https://github.com/thinkshout/12ntcmaps">thinkshout/12ntcmaps</a>
+        <div class="step slide" data-x="0" data-y="-1500">
+          <div id="map" style="width: 600px; height: 400px"></div>
+
+            <script src="js/leaflet.js"></script>
+            <script>
+              var map = new L.Map('map');
+
+              var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
+                cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+                cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
+
+              map.setView(new L.LatLng(51.505, -0.09), 13).addLayer(cloudmade);
+
+
+              var markerLocation = new L.LatLng(51.5, -0.09),
+                marker = new L.Marker(markerLocation);
+
+              map.addLayer(marker);
+              marker.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+
+
+              var circleLocation = new L.LatLng(51.508, -0.11),
+                circleOptions = {color: '#f03', opacity: 0.7},
+                circle = new L.Circle(circleLocation, 500, circleOptions);
+
+              circle.bindPopup("I am a circle.");
+              map.addLayer(circle);
+
+
+              var p1 = new L.LatLng(51.509, -0.08),
+                p2 = new L.LatLng(51.503, -0.06),
+                p3 = new L.LatLng(51.51, -0.047),
+                polygonPoints = [p1, p2, p3],
+                polygon = new L.Polygon(polygonPoints);
+
+              polygon.bindPopup("I am a polygon.");
+              map.addLayer(polygon);
+
+
+              map.on('click', onMapClick);
+
+              var popup = new L.Popup();
+
+              function onMapClick(e) {
+                var latlngStr = '(' + e.latlng.lat.toFixed(3) + ', ' + e.latlng.lng.toFixed(3) + ')';
+
+                popup.setLatLng(e.latlng);
+                popup.setContent("You clicked the map at " + latlngStr);
+                map.openPopup(popup);
+              }
+            </script>
+          </div>
         </div>
-      </div>
-      <div class="step slide" data-x="0" data-y="-1500">
-        <p>
-          Second slide testing
-        </p>
-      </div>
-    </div>
+      </div><!-- End Impress -->
     </div><!-- End Wrap -->
-    <footer>Test</footer>
+    <footer>
+      <div id="footer">
+        <div class="contact">
+          <h3><a href="http://thinkshout.com" title="ThinkShout">ThinkShout, Inc.</a></h3>
+          <p>721 NW 9th Avenue, Suite 228, Portland OR 97209 | (503) 877-9540 | <a href="http://thinkshout.com/contact" title="Contact us">info at thinkshout.com</a></p>
+        </div>
+        <div class="presenter">
+          <h3>Sean Larkin, Partner</h3>
+      </div>
+    </footer>
     <script src="js/impress.js" type="text/javascript"></script><script type="text/javascript">impress();</script>
   </body>
 </html>

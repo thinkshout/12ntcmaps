@@ -42,24 +42,63 @@ body {
   border-top: 10px solid #003547;
 }
 
+header {
+  width: 960px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #wrap {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
+  margin: 0 auto -7em;
 }
 
 footer {
-  height: 4em;
-  background-image: url(http://thinkshout.com/sites/all/themes/swift/images/texture-bkgrd.png);
-  background-repeat-x: initial;
-  background-repeat-y: initial;
-  background-attachment: initial;
-  background-position-x: initial;
-  background-position-y: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: initial;
+  height: 7em;
+  background-image: url(../imgs/texture-bkgrd.png);
+  padding-top: 10px;
+}
+
+#footer {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer p {
+  font-size: 13px;
+}
+
+.contact {
+  background: url(../imgs/ts_sm_logo.png) no-repeat top left;
+  padding-left: 55px;
+  float: left;
+}
+
+.presenter {
+  background: url(../imgs/presenter_background.png) no-repeat top left;
+  padding-left: 20px;
+  height: 60px;
+  float: right;
+}
+
+#footer h3, #footer p {
+  font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+  margin: 0;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+#footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#footer .presenter h3 {
+  margin-top: 0.5em;
 }
 
 img.forkme {
@@ -80,7 +119,7 @@ img.forkme {
   -ms-box-sizing:     border-box;
   -o-box-sizing:      border-box;
   box-sizing:         border-box;
-  }
+}
 
 /* fade out inactive slides */
 
@@ -107,7 +146,7 @@ img.forkme {
 .slide {
   display: block;
   width: 900px;
-  height: 700px;
+  height: 600px;
   padding: 40px 60px;
   border-radius: 10px;
   background-color: white;
