@@ -109,47 +109,28 @@ img.forkme {
   z-index: 100;
 }
 
-/* COMMON STEP STYLES */
-
-.step {
-  width: 900px;
-  padding: 40px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing:    border-box;
-  -ms-box-sizing:     border-box;
-  -o-box-sizing:      border-box;
-  box-sizing:         border-box;
-}
-
-/* fade out inactive slides */
-
-.step {
-  -webkit-transition: opacity 1s;
-  -moz-transition:    opacity 1s;
-  -ms-transition:     opacity 1s;
-  -o-transition:      opacity 1s;
-  transition:         opacity 1s;
-}
-
-.step:not(.active) {
-  opacity: 0.3;
-}
-
-/*
- * SLIDE STEP STYLES
- *
- * inspired by: http://html5slides.googlecode.com/svn/trunk/styles.css
- *
- * ;)
- */
+/* BEGIN STYLING IMPRESS SLIDESHOW */
 
 .slide {
   display: block;
   width: 900px;
   height: 600px;
-  padding: 40px 60px;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-  border: 1px solid rgba(0, 0, 0, .3);
+  overflow: hidden;
+  padding: 2% 2%;
+  background: #F1F1F1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #BEBEBE;
+  -moz-box-shadow: #777d7f 0px 1px 2px;
+  -webkit-box-shadow: #777d7f 0px 1px 2px;
+  -o-box-shadow: #777d7f 0px 1px 2px;
+  box-shadow: #777d7f 0px 1px 2px;
+}
+
+img.compass-rose {
+  height: 600px;
 }

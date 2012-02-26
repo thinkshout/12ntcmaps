@@ -12,66 +12,28 @@
       <header>
         <h1 class="site-name"><a href="http://thinkshout.com" title="ThinkShout"><img src="imgs/logo.png" alt="ThinkShout" /></h1>
       </header>
-      <div><a href="https://github.com/thinkshout/12ntcmaps/tree/gh-pages"><img class="forkme" src="imgs/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a></div>
+      <div class="github"><a href="https://github.com/thinkshout/12ntcmaps/tree/gh-pages"><img class="forkme" src="imgs/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a></div>
+    
+      <!-- BEGIN IMPRESS SLIDESHOW -->
       <div id="impress">
-        <div class="step slide" data-x="-1000" data-y="-1500">
-          <h1>Geek Out with Online Maps as Story Telling Devices</h1>
-          <div class="description">2012 NTC Presentation - "Geek Out With Online Maps As Storytelling Devices"</div>
+        <div id="welcome" class="step" data-x="0" data-y="0" data-scale="8">
+          <img class="compass-rose" src="imgs/compass_rose.png"/>
         </div>
-        <div class="step slide" data-x="0" data-y="-1500">
-          <div id="map" style="width: 600px; height: 400px"></div>
-
-            <script src="js/leaflet.js"></script>
-            <script>
-              var map = new L.Map('map');
-
-              var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
-                cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
-                cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
-
-              map.setView(new L.LatLng(51.505, -0.09), 13).addLayer(cloudmade);
-
-
-              var markerLocation = new L.LatLng(51.5, -0.09),
-                marker = new L.Marker(markerLocation);
-
-              map.addLayer(marker);
-              marker.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-
-
-              var circleLocation = new L.LatLng(51.508, -0.11),
-                circleOptions = {color: '#f03', opacity: 0.7},
-                circle = new L.Circle(circleLocation, 500, circleOptions);
-
-              circle.bindPopup("I am a circle.");
-              map.addLayer(circle);
-
-
-              var p1 = new L.LatLng(51.509, -0.08),
-                p2 = new L.LatLng(51.503, -0.06),
-                p3 = new L.LatLng(51.51, -0.047),
-                polygonPoints = [p1, p2, p3],
-                polygon = new L.Polygon(polygonPoints);
-
-              polygon.bindPopup("I am a polygon.");
-              map.addLayer(polygon);
-
-
-              map.on('click', onMapClick);
-
-              var popup = new L.Popup();
-
-              function onMapClick(e) {
-                var latlngStr = '(' + e.latlng.lat.toFixed(3) + ', ' + e.latlng.lng.toFixed(3) + ')';
-
-                popup.setLatLng(e.latlng);
-                popup.setContent("You clicked the map at " + latlngStr);
-                map.openPopup(popup);
-              }
-            </script>
-          </div>
+        <div id="north" class="step slide" data-x="0" data-y="-3000">
+          <img src="imgs/huc_codes.png"/>
         </div>
-      </div><!-- End Impress -->
+        <div id="northeast" class="step slide" data-x="2000" data-y="-2000">
+          <img src="imgs/mapbox_charts.png"/>
+        </div>
+        <div id="east" class="step slide" data-x="3000" data-y="0"></div>
+        <div id="southeast" class="step slide" data-x="2000" data-y="2000"></div>
+        <div id="south" class="step slide" data-x="0" data-y="2500"></div>
+        <div id="southwest" class="step slide" data-x="-2000" data-y="2000"></div>
+        <div id="west" class="step slide" data-x="-3000" data-y="0"></div>
+        <div id="northwest" class="step slide" data-x="-2000" data-y="-2000"></div>
+      </div>
+      <!-- END IMPRESS SLIDESHOW -->
+    
     </div><!-- End Wrap -->
     <footer>
       <div id="footer">
