@@ -78,7 +78,7 @@ footer {
   float: left;
 }
 
-.presenter {
+.navigation {
   background: url(../imgs/presenter_background.png) no-repeat top left;
   padding-left: 20px;
   height: 60px;
@@ -97,8 +97,11 @@ footer {
   text-decoration: none;
 }
 
-#footer .presenter h3 {
-  margin-top: 0.5em;
+#footer .navigation p {
+  width: 180px;
+  font-size: 11px;
+  margin-top: 0.6em;
+  line-height: 1.1em;
 }
 
 img.forkme {
@@ -131,13 +134,44 @@ img.forkme {
   box-shadow: #777d7f 0px 1px 2px;
 }
 
+.slide-inner {
+  padding: 10px 20px;
+}
+
 img.compass-rose {
   height: 400px;
 }
 
-/* Welcome message on the first slide */
+#center.step:not(.active) {
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+  -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+  -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+  -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+  transition:         opacity 1s,         transform 0.5s 1s;
+}
 
-.welcome {    
+#center.step.active {
+  opacity: 1;
+  -webkit-transition: opacity 1s 0.5s, -webkit-transform 0.5s;
+  -moz-transition:    opacity 1s 0.5s,    -moz-transform 0.5s;
+  -ms-transition:     opacity 1s 0.5s,     -ms-transform 0.5s;
+  -o-transition:      opacity 1s 0.5s,      -o-transform 0.5s;
+  transition:         opacity 1s 0.5s,         transform 0.5s;
+}
+
+.step-center #overview {
+  opacity: 0.5;
+  -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+  -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+  -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+  -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+  transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+/* Welcome and closing messages */
+
+.welcome, .closing {    
     width: 960px;
     margin-left: auto;
     margin-right: auto;   
@@ -150,7 +184,8 @@ img.compass-rose {
     transition:         opacity 1s,         transform 0.5s 1s;
 }
 
-.step-overview + .welcome {
+.step-intro + .welcome,
+.step-outro~.closing {
     opacity: 1;
     -webkit-transition: opacity 1s 2s, -webkit-transform 0.5s;
     -moz-transition:    opacity 1s 2s,    -moz-transform 0.5s;
@@ -159,7 +194,8 @@ img.compass-rose {
     transition:         opacity 1s 2s,         transform 0.5s; 
 }
 
-.welcome-top {
+.welcome-top,
+.closing-top {
   position: fixed;
   max-width: 400px;
   margin-left: 20px;
@@ -169,9 +205,32 @@ img.compass-rose {
 .welcome-bottom {
   position: fixed;
   bottom: 100px;
+  width: 960px;
+}
+
+.closing-bottom {
+  position: fixed;
+  bottom: 100px;
   margin-left: 760px;
 }
 
-img.ntc-logo {
+.welcome-bottom .left {
+  float: left;
+  padding-top: 50px;
+}
+
+.welcome-bottom .right {
+  float: right;
+}
+
+.welcome-bottom h2 {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+img.ntc-logo,
+img.qr-code {
   width: 200px;
 }
+
+/* Closing effects */
