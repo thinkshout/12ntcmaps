@@ -132,5 +132,46 @@ img.forkme {
 }
 
 img.compass-rose {
-  height: 600px;
+  height: 400px;
+}
+
+/* Welcome message on the first slide */
+
+.welcome {    
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;   
+    z-index: 100;
+    opacity: 0;
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+.step-overview + .welcome {
+    opacity: 1;
+    -webkit-transition: opacity 1s 2s, -webkit-transform 0.5s;
+    -moz-transition:    opacity 1s 2s,    -moz-transform 0.5s;
+    -ms-transition:     opacity 1s 2s,     -ms-transform 0.5s;
+    -o-transition:      opacity 1s 2s,      -o-transform 0.5s;
+    transition:         opacity 1s 2s,         transform 0.5s; 
+}
+
+.welcome-top {
+  position: fixed;
+  max-width: 400px;
+  margin-left: 20px;
+  top: 100px;
+}
+
+.welcome-bottom {
+  position: fixed;
+  bottom: 100px;
+  margin-left: 760px;
+}
+
+img.ntc-logo {
+  width: 200px;
 }
