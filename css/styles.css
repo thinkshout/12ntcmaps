@@ -22,9 +22,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
-h2 {
+h2, h2 a {
   color: #F58026;
   font-weight: normal;
+  text-decoration: none;
   font-family: 'Open Sans',sans-serif;
   font-size: 28px;
   margin-bottom: 2em;
