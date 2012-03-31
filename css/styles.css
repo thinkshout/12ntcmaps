@@ -128,8 +128,17 @@ img.forkme {
   margin-bottom: 0.8em;
 }
 
+.slide-inner.tight h1 {
+  margin-bottom: 0.6em;
+}
+
 .slide-inner ul li {
+  margin-left: 1em;
   margin-bottom: 1.2em;
+}
+
+.slide-inner.tight ul li {
+  margin-bottom: 0.8em;
 }
 
 #north-2 .slide-inner {
@@ -183,6 +192,7 @@ img.compass-rose {
 
 #north-2.step:not(.active),
 #north-3.step:not(.active),
+#northeast-2.step:not(.active),
 #center.step:not(.active) {
   opacity: 0;
   -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
@@ -192,6 +202,9 @@ img.compass-rose {
   transition:         opacity 1s,         transform 0.5s 1s;
 }
 
+#north-2.step.active,
+#north-3.step.active,
+#northeast-2.step.active,
 #center.step.active {
   opacity: 1;
   -webkit-transition: opacity 1s 0.5s, -webkit-transform 0.5s;
