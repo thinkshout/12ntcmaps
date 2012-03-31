@@ -134,13 +134,21 @@ img.forkme {
 
 #north-2 .slide-inner {
   position: relative;
-  top: 180px;
+  top: 140px;
 }
 
 #north-2 h1 {
   font-size: 120px;
   text-align: center;
-  word-spacing: 0.4em;
+}
+
+#north-2 h1 span {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+
+#north-2 div {
+  text-align: center;
 }
 
 /* BEGIN STYLING IMPRESS SLIDESHOW */
@@ -174,6 +182,7 @@ img.compass-rose {
 }
 
 #north-2.step:not(.active),
+#north-3.step:not(.active),
 #center.step:not(.active) {
   opacity: 0;
   -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
