@@ -213,14 +213,114 @@ img.mapbox-logo {
   width: 100px;
 }
 
+img.esri {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+img.opengeo {
+  margin-left: 100px;
+}
+
+img.fusion {
+  margin-left: 200px;
+}
+
+img.tilemill {
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+img.tiles {
+  display: block;
+  margin-left: 180px;
+  margin-bottom: 20px;
+}
+
+img.mapquest {
+  margin-left: 80px;
+}
+
+img.bing {
+  margin-right: 20px;
+}
+
+img.google {
+  margin-top: 20px;
+  margin-left: 180px;
+}
+
+img.google2 {
+  margin-top: 40px;
+  margin-left: 350px;
+}
+
+img.openlayers {
+  margin-top: 40px;
+  margin-left: 160px;
+}
+
+img.osm {
+  margin-top: 30px;
+}
+
+img.leaflet {
+  margin-top: 80px;
+  margin-left: 220px;
+  margin-right: 20px;
+}
+
+img.cloudmade {
+  margin-top: 30px;
+  margin-left: 90px;
+}
+
 img.energy-gov {
   margin-left: 180px;
   margin-top: 50px;
 }
 
-#northwest .justification {
-  text-align: center;
-  margin-top: 170px;
+img.simplegeo {
+  margin-top: 50px;
+  margin-left: 160px;
+  margin-right: 40px;
+}
+
+#southeast h1 {
+  margin-bottom: 0.3em;
+}
+#southeast img {
+  width: 270px;
+}
+
+a.tufte {
+}
+
+a.bacteria {
+  margin-left: 20px;
+}
+
+a.intertwine {
+  margin-left: 150px;
+  margin-right: 20px;
+}
+
+#southwest h2 {
+  margin-bottom: 20px;
+}
+
+img.census {
+  margin-left: 200px;
+  margin-right: 40px;
+}
+
+#northwest .xkcd {
+  float: left;
+}
+
+#northwest .quote {
+  float: right;
+  width: 350px;
 }
 
 /* BEGIN STYLING IMPRESS SLIDESHOW */
