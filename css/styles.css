@@ -132,6 +132,11 @@ img.forkme {
   margin-bottom: 0.8em;
 }
 
+.slide-inner h2 {
+  font-size: 50px;
+  text-align: center;
+}
+
 .slide-inner.tight h1 {
   margin-bottom: 0.6em;
 }
@@ -212,6 +217,11 @@ img.energy-gov {
   margin-top: 50px;
 }
 
+#northwest .justification {
+  text-align: center;
+  margin-top: 170px;
+}
+
 /* BEGIN STYLING IMPRESS SLIDESHOW */
 
 .slide {
@@ -243,7 +253,9 @@ img.compass-rose {
 }
 
 .step-north-3 #north-1,
-.step-north-4 #north-1 {
+.step-north-4 #north-1,
+.step-east-3 #east-1,
+.step-east-4 #east-1 {
   opacity: 0;
 }
 
@@ -251,6 +263,9 @@ img.compass-rose {
 #north-3.step:not(.active),
 #north-4.step:not(.active),
 #northeast-2.step:not(.active),
+#east-2.step:not(.active),
+#east-3.step:not(.active),
+#east-4.step:not(.active),
 #center.step:not(.active) {
   opacity: 0;
   -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
@@ -264,6 +279,9 @@ img.compass-rose {
 #north-3.step.active,
 #north-4.step.active,
 #northeast-2.step.active,
+#east-2.step.active,
+#east-3.step.active,
+#east-4.step.active,
 #center.step.active {
   opacity: 1;
   -webkit-transition: opacity 1s 0.5s, -webkit-transform 0.5s;
