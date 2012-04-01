@@ -123,6 +123,10 @@ img.forkme {
   font-size: 32px;
 }
 
+.slide-inner .small {
+  font-size: 20px;
+}
+
 .slide-inner h1 {
   font-size: 50px;
   margin-bottom: 0.8em;
@@ -132,6 +136,10 @@ img.forkme {
   margin-bottom: 0.6em;
 }
 
+.slide-inner.very-tight h1 {
+  margin-bottom: 0.4em;
+}
+
 .slide-inner ul li {
   margin-left: 1em;
   margin-bottom: 1.2em;
@@ -139,6 +147,33 @@ img.forkme {
 
 .slide-inner.tight ul li {
   margin-bottom: 0.8em;
+}
+
+.slide-inner.very-tight ul li {
+  margin-bottom: 0.6em;
+}
+
+.large-image {
+  text-align: center;
+}
+
+.large-image img {
+  max-height: 470px;
+}
+
+.attribution {
+  font-style: italic;
+  font-size: 18px;
+  text-align: right;
+}
+
+.footnote {
+  font-style: italic;
+  font-size: 24px;
+}
+
+.attribution .book {
+  text-decoration: underline;
 }
 
 #north-2 .slide-inner {
@@ -158,6 +193,23 @@ img.forkme {
 
 #north-2 div {
   text-align: center;
+}
+
+.globe {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+img.mapbox-logo {
+  float: right;
+  margin-top: -100px;
+  width: 100px;
+}
+
+img.energy-gov {
+  margin-left: 180px;
+  margin-top: 50px;
 }
 
 /* BEGIN STYLING IMPRESS SLIDESHOW */
@@ -190,8 +242,14 @@ img.compass-rose {
   height: 400px;
 }
 
+.step-north-3 #north-1,
+.step-north-4 #north-1 {
+  opacity: 0;
+}
+
 #north-2.step:not(.active),
 #north-3.step:not(.active),
+#north-4.step:not(.active),
 #northeast-2.step:not(.active),
 #center.step:not(.active) {
   opacity: 0;
@@ -204,6 +262,7 @@ img.compass-rose {
 
 #north-2.step.active,
 #north-3.step.active,
+#north-4.step.active,
 #northeast-2.step.active,
 #center.step.active {
   opacity: 1;
@@ -286,5 +345,3 @@ img.ntc-logo,
 img.qr-code {
   width: 200px;
 }
-
-/* Closing effects */
