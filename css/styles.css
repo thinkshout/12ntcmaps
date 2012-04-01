@@ -135,6 +135,7 @@ img.forkme {
 .slide-inner h2 {
   font-size: 50px;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .slide-inner.tight h1 {
